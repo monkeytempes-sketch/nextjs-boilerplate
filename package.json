@@ -9,6 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "better-sqlite3": "^13.2.0",
+    "bootstrap": "^5.3.9",
+    "drizzle-kit": "^0.31.11",
+    "drizzle-orm": "^0.45.4",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
