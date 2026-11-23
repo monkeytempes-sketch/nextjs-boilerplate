@@ -1,9 +1,10 @@
 import "dotenv/config";
 import { defineConfig } from "drizzle-kit";
+import "dotenv/config";
 
 export default defineConfig({
   schema: "./db/schema.ts",
-  out: "./.drizzle",
+  out: "./drizzle",
   dialect: "turso",
   dbCredentials: {
     url: process.env.TURSO_DATABASE_URL!,

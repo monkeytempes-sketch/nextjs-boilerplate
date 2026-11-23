@@ -1,21 +1,24 @@
-import { db } from '@/db';
-import { posts } from '@/db/schema';
-import { desc } from 'drizzle-orm';
-import { NextResponse } from 'next/server';
+import { db } from "@/db";
+import { posts } from "@/db/schema";
+import { eq } from "drizzle-orm";
+import { NextResponse } from "next/server";
 
-export async function GET() {
-  const allPosts = await db.select().from(posts).orderBy(desc(posts.createdAt));
-  return NextResponse.json(allPosts);
-}
+export async function DELETE(
+  req: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const { id } = await params;
+    const postId = Number(id);
 
-export async function POST(req: Request) {
-  const { title, content } = await req.json();
+    if (Number.isNaN(postId)) {
+      return NextResponse.json({ error: "ID tidak valid" }, { status: 400 });
+    }
 
-  // Validate the input
-  if (!title || !content) {
-    return NextResponse.json({ error: 'Title and content are required' }, { status: 400 });
+    await db.delete(posts).where(eq(posts.id, postId));
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error("DELETE error:", error);
+    return NextResponse.json({ error: "Gagal menghapus" }, { status: 500 });
   }
-
-  const newPost = await db.insert(posts).values({ title, content }).returning();
-  return NextResponse.json(newPost, { status: 201 });
 }
