@@ -2,7 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-<<<<<<< HEAD
   experimental: {
     agentFeedback: true,
   },
@@ -16,8 +15,6 @@ const nextConfig: NextConfig = {
       },
     },
   },
-=======
->>>>>>> cd319dce9fadeb9632c03845f867dfbfb77f3050
 };
 
 export default nextConfig;

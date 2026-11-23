@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "drizzle-blog",
-=======
-  "name": "nextjs",
->>>>>>> cd319dce9fadeb9632c03845f867dfbfb77f3050
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@types/better-sqlite3": "^9.6.0",
     "better-sqlite3": "^13.2.0",
     "bootstrap": "^5.3.9",
@@ -25,25 +20,12 @@
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "4.3.3",
-=======
-    "next": "16.2.4",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
->>>>>>> cd319dce9fadeb9632c03845f867dfbfb77f3050
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-<<<<<<< HEAD
     "eslint-config-next": "16.4.6",
     "tailwindcss": "4.3.3",
-=======
-    "eslint-config-next": "16.2.4",
-    "tailwindcss": "^4",
->>>>>>> cd319dce9fadeb9632c03845f867dfbfb77f3050
     "typescript": "^5"
   }
 }
