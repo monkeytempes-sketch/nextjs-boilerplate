@@ -1,10 +1,5 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  outputFileTracingIncludes: {
-    "/**": ["./sqlite.db"],
-  },
-  serverExternalPackages: ["better-sqlite3"],
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
